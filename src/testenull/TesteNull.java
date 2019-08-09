@@ -28,7 +28,7 @@ public class TesteNull {
     }
 
     public static List<CartaoDeCredito> informarCartoes(CartaoDeCredito cartaoDeCredito, Usuario usuario) {
-        if (usuario.getCartoes() != null) {
+        if (null != usuario.getCartoes()) {
             for (CartaoDeCredito cartao : usuario.getCartoes()) {
                 if (cartaoDeCredito.getNumero().equals(cartao.getNumero())) {
                     return usuario.getCartoes();
@@ -36,6 +36,5 @@ public class TesteNull {
             }
         }
         return usuario.getCartoes();
-
     }
 }
